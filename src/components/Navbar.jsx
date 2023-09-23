@@ -77,6 +77,7 @@ const Navbar = () => {
               Contact
             </Link>
             <Button
+              className='primary-btn'
               h={["46px", "46px", "53px"]}
               w={["152px", "152px", "172px"]}
               bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'
@@ -154,6 +155,7 @@ const Navbar = () => {
                 Contact
               </Link>
               <Button
+                className='primary-btn'
                 h={["46px", "46px", "53px"]}
                 w={["152px", "152px", "172px"]}
                 bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'

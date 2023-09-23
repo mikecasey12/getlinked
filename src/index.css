@@ -2,7 +2,6 @@
   font-family: montserrat, unica-one, system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background: #150e28;
 
   font-synthesis: none;
   scroll-behavior: smooth;
@@ -17,7 +16,15 @@
   margin: 0;
 }
 
-button:hover {
+body {
+  background: #150e28;
+  color: white !important;
+}
+
+button {
+  color: white !important;
+}
+button.primary-btn:hover {
   background: transparent !important;
   border: 2px solid !important;
   border-color: #d434fe !important;

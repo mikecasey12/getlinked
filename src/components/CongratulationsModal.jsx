@@ -56,6 +56,7 @@ const CongratulationsModal = (props) => {
 
         <ModalFooter>
           <Button
+            className='primary-btn'
             onClick={actionsHandler}
             h={[null, "46px", "53px"]}
             w='100%'

@@ -276,15 +276,14 @@ const RegistrationForm = () => {
           </VStack>
           <Box textAlign={"center"} mt={6}>
             <Button
+              className='primary-btn'
               isLoading={isSubmitting}
               loadingText='Submitting'
               type='submit'
-              h={[null, "46px", "53px"]}
-              w='100%'
-              sx={{
-                bg: "linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9);",
-                borderRadius: "4px",
-              }}
+              h={["46px", "46px", "53px"]}
+              w={["152px", "152px", "172px"]}
+              bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'
+              borderRadius='4px'
             >
               Register
             </Button>

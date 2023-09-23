@@ -106,6 +106,7 @@ to the rules and guidelines of the hackathon, including deadlines, use of
 specific technologies or APIs, and any other competition-specific requirements.`}
         </Text>
         <Button
+          className='primary-btn'
           h={["46px", "46px", "53px"]}
           w={["152px", "152px", "172px"]}
           sx={{

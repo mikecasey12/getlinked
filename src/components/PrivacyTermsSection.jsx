@@ -95,6 +95,7 @@ to the practices described in this policy.`}</Text>
           </List>
           <Box textAlign='center' mt={6}>
             <Button
+              className='primary-btn'
               h={["46px", "46px", "53px"]}
               w={["152px", "152px", "172px"]}
               sx={{

@@ -33,6 +33,7 @@ const Error404 = () => {
         </Heading>
         <HStack spacing={8}>
           <Button
+            className='primary-btn'
             h={["46px", "46px", "53px"]}
             w={["152px", "152px", "172px"]}
             bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'
@@ -42,6 +43,7 @@ const Error404 = () => {
             Try Again
           </Button>
           <Button
+            className='primary-btn'
             h={["46px", "46px", "53px"]}
             w={["152px", "152px", "172px"]}
             bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'

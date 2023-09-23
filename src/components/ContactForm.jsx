@@ -50,13 +50,12 @@ const ContactForm = () => {
             Thank your for contacting us
           </Heading>
           <Button
+            className='primary-btn'
             onClick={onBack}
-            h={[null, "46px", "53px"]}
-            w={[null, "152px", "172px"]}
-            sx={{
-              bg: "linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9);",
-              borderRadius: "4px",
-            }}
+            h={["46px", "46px", "53px"]}
+            w={["152px", "152px", "172px"]}
+            bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'
+            borderRadius='4px'
           >
             Back
           </Button>
@@ -140,6 +139,7 @@ const ContactForm = () => {
             </Box>
             <Box textAlign={"center"}>
               <Button
+                className='primary-btn'
                 type='submit'
                 isLoading={isSending}
                 loadingText='Sending message...'
