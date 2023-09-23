@@ -49,7 +49,7 @@ for participants.
           <Image mt='20px' src={award} w={["100%"]} />
         </Box>
         <Box w={["100%", "100%", "50%"]}>
-          <Image src={reward} h={["100%"]} />
+          <Image src={reward} w={["100%"]} />
         </Box>
       </Box>
     </Box>

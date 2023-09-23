@@ -8,11 +8,11 @@ I had the incredible opportunity to participate in the Hackathon organized by Ge
 
 ### Figma Design
 
-- The design for our project served as our creative blueprint. You can check it out here: [Figma Design](https://www.figma.com/file/5WXTnOu1Yy7vjCDCGKSnib/Getlinked?type=design&node-id=0-1&mode=design&t=YfB0JBrgpquQFDwm-0)
+- The design for the project served as the creative blueprint. You can check it out here: [Figma Design](https://www.figma.com/file/5WXTnOu1Yy7vjCDCGKSnib/Getlinked?type=design&node-id=0-1&mode=design&t=YfB0JBrgpquQFDwm-0)
 
-### Real-World API
+### Backend API
 
-- We leveraged a real-world API to enhance our project's functionality. The API documentation can be found here: [Real-World API](https://documenter.getpostman.com/view/13489492/2s9YC5zYA5)
+- I leveraged a Backend API to for user registration and contact. The API documentation can be found here: [Backend API](https://documenter.getpostman.com/view/13489492/2s9YC5zYA5)
 
 ## Technologies Used
 
@@ -38,7 +38,7 @@ I used several Node.js dependencies to enhance the project. Here's a list of the
 
 ## How to Run the Project
 
-If you'd like to experience our Hackathon project firsthand, follow these steps:
+If you'd like to experience the Hackathon project firsthand, follow these steps:
 
 1. Clone the project repository to your local machine.
    ```bash

@@ -29,7 +29,7 @@ const CongratulationsModal = (props) => {
         bg={["transparent"]}
         border={["1px"]}
         borderColor='#D434FE'
-        p={["54px"]}
+        p={["3%", "54px"]}
         w={["70%"]}
       >
         <ModalBody textAlign={["center"]} bg={["transparent"]}>

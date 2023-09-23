@@ -26,7 +26,7 @@ const HeroSection = () => {
       mt='-64px'
       h={["900px", "920px", "100%"]}
       bgImg={heroBg}
-      bgPos={["left center", "left center", "left"]}
+      bgPos={["right", "left center", "left"]}
       bgSize='cover'
       bgRepeat='no-repeat'
       py={["48px", "48px", "64px"]}
@@ -77,7 +77,7 @@ const HeroSection = () => {
               </Heading>
               <Box
                 w={["10%"]}
-                mb={["0", "-30px", "-20px", "0px", "20px", "40px"]}
+                mb={["-30px", "-30px", "-20px", "0px", "20px", "40px"]}
               >
                 <Image
                   src={extrascreative}

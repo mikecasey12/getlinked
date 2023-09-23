@@ -114,7 +114,7 @@ const RegistrationForm = () => {
               w={"100%"}
               gap={6}
               align='start'
-              flexDir={[null, "column", "row"]}
+              flexDir={["column", "column", "row"]}
             >
               <Box w={"100%"}>
                 <Text
@@ -150,7 +150,7 @@ const RegistrationForm = () => {
                     required: { value: true, message: "Phone number is empty" },
                   })}
                 />
-                <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+                <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                   {errors.phonenumber?.message}
                 </Text>
               </Box>
@@ -159,7 +159,7 @@ const RegistrationForm = () => {
               w={"100%"}
               gap={6}
               align='start'
-              flexDir={[null, "column", "row"]}
+              flexDir={["column", "column", "row"]}
             >
               <Box w={"100%"}>
                 <Text mb={1} fontSize={["13px", "13px", "14px"]}>
@@ -210,7 +210,7 @@ const RegistrationForm = () => {
               </Box>
             </HStack>
             <HStack width={"100%"} gap={6} align='start'>
-              <Box w={[null, "250%", "100%"]}>
+              <Box w={["250%", "250%", "100%"]}>
                 <Text mb={1} fontSize={["13px", "13px", "14px"]}>
                   Category
                 </Text>

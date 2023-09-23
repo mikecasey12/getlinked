@@ -42,7 +42,7 @@ const Navbar = () => {
       >
         <Box>
           <Link as={NavLink} to={"/ikebude-michael/hackathon/"}>
-            <Image src={logo} width={["4.5rem", "6rem", "6rem", "171px"]} />
+            <Image src={logo} width={["6rem", "6rem", "6rem", "171px"]} />
           </Link>
         </Box>
         <Box

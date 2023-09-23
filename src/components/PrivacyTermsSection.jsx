@@ -31,7 +31,7 @@ const PrivacyTermsSection = () => {
       zIndex={2}
     >
       <Box w={["100%", "100%", "50%"]}>
-        <Image src={policy} h={["100%"]} />
+        <Image src={policy} w={["100%"]} />
       </Box>
       <Box w={["100%", "100%", "50%"]}>
         <Heading

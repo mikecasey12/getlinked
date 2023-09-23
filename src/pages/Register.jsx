@@ -25,7 +25,7 @@ const Register = () => {
       zIndex={2}
     >
       <Box w={["100%", "100%", "50%"]}>
-        <Image src={image} h={["100%"]} />
+        <Image src={image} w={["100%"]} />
       </Box>
       <Box
         px={["5%", "30px", "70px"]}

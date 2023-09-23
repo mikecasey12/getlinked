@@ -21,7 +21,7 @@ const CriteriaSection = () => {
       zIndex={2}
     >
       <Box w={["100%", "100%", "50%"]}>
-        <Image ml={[0, 0, 10]} src={criteria} h={["100%"]} />
+        <Image ml={[0, 0, 10]} src={criteria} w={["100%"]} />
       </Box>
 
       <Box w={["100%", "100%", "50%"]}>
