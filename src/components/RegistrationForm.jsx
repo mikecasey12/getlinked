@@ -21,12 +21,17 @@ import movementImg from "../assets/extras-movement.png";
 import CongratulationsModal from "./CongratulationsModal";
 
 const RegistrationForm = () => {
+  //handles congratulatory popup modal
   const { isOpen, onClose, onOpen } = useDisclosure();
+
+  //retrieves category list from server on component mount
   const { isLoading, isError, data } = useQuery(
     ["categories"],
     getCategoriesUtil,
-    { staleTime: 10000 }
+    { staleTime: 100000 }
   );
+
+  //handles users post request to the server for registration
   const {
     mutate: registerUser,
     status,
@@ -34,8 +39,14 @@ const RegistrationForm = () => {
     isLoading: isSubmitting,
     error,
   } = useMutation(registrationUtil);
+
+  //extract returning category list data
   const categories = data?.data;
+
+  //deconstructing form - register ties form input to form state and handlesSubmit retrieves formdata
   const { register, handleSubmit, formState, reset } = useForm();
+
+  //get errors that occurs while filling the form
   const { errors } = formState;
 
   //Show a successful modal
@@ -45,6 +56,7 @@ const RegistrationForm = () => {
     }
   }, [status, onOpen]);
 
+  //reset form back to defaultValues
   const onReset = () => {
     reset();
   };
@@ -61,6 +73,7 @@ const RegistrationForm = () => {
       privacy_poclicy_accepted: formdata.agreement,
     };
 
+    //handles form data and sends info to the registration api using the useMutation hook
     registerUser(userdata);
   };
 
@@ -69,7 +82,7 @@ const RegistrationForm = () => {
       <VStack align={"left"}>
         <Heading
           as='h2'
-          fontSize={[null, "20px", "32px"]}
+          fontSize={["20px", "20px", "32px"]}
           fontFamily='ClashDisplay-Bold'
           mb='10px'
           color={"#D434FE"}
@@ -79,7 +92,7 @@ const RegistrationForm = () => {
         <HStack align='center'>
           <Text
             fontFamily='Montserrat-Regular'
-            fontSize={[null, "12px", "14px"]}
+            fontSize={["12px", "12px", "14px"]}
             mb={1}
           >
             Be a part of this movement:
@@ -89,7 +102,7 @@ const RegistrationForm = () => {
 
         <Heading
           as='h2'
-          fontSize={[null, "18px", "24px"]}
+          fontSize={["18px", "18px", "24px"]}
           fontFamily='Montserrat-Regular'
           mb={2}
         >
@@ -106,7 +119,7 @@ const RegistrationForm = () => {
               <Box w={"100%"}>
                 <Text
                   mb={1}
-                  fontSize={[null, "13px", "14px"]}
+                  fontSize={["13px", "13px", "14px"]}
                 >{`Teams's Name`}</Text>
                 <Input
                   isInvalid={errors.teamname?.message ? true : false}
@@ -118,12 +131,12 @@ const RegistrationForm = () => {
                     required: { value: true, message: "Team name is required" },
                   })}
                 />
-                <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+                <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                   {errors.teamname?.message}
                 </Text>
               </Box>
               <Box w={"100%"}>
-                <Text mb={1} fontSize={[null, "13px", "14px"]}>
+                <Text mb={1} fontSize={["13px", "13px", "14px"]}>
                   Phone
                 </Text>
                 <Input
@@ -149,7 +162,7 @@ const RegistrationForm = () => {
               flexDir={[null, "column", "row"]}
             >
               <Box w={"100%"}>
-                <Text mb={1} fontSize={[null, "13px", "14px"]}>
+                <Text mb={1} fontSize={["13px", "13px", "14px"]}>
                   Email
                 </Text>
                 <Input
@@ -170,12 +183,12 @@ const RegistrationForm = () => {
                     },
                   })}
                 />
-                <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+                <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                   {errors.email?.message}
                 </Text>
               </Box>
               <Box w={"100%"}>
-                <Text mb={1} fontSize={[null, "13px", "14px"]}>
+                <Text mb={1} fontSize={["13px", "13px", "14px"]}>
                   Project Topic
                 </Text>
                 <Input
@@ -191,14 +204,14 @@ const RegistrationForm = () => {
                     },
                   })}
                 />
-                <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+                <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                   {errors.projecttopic?.message}
                 </Text>
               </Box>
             </HStack>
             <HStack width={"100%"} gap={6} align='start'>
               <Box w={[null, "250%", "100%"]}>
-                <Text mb={1} fontSize={[null, "13px", "14px"]}>
+                <Text mb={1} fontSize={["13px", "13px", "14px"]}>
                   Category
                 </Text>
                 <Select
@@ -227,12 +240,12 @@ const RegistrationForm = () => {
                     </option>
                   ))}
                 </Select>
-                <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+                <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                   {errors.category?.message}
                 </Text>
               </Box>
               <Box w={"100%"}>
-                <Text mb={1} fontSize={[null, "13px", "14px"]}>
+                <Text mb={1} fontSize={["13px", "13px", "14px"]}>
                   Group Size
                 </Text>
                 <Select
@@ -252,7 +265,7 @@ const RegistrationForm = () => {
                   <option value={10}>10</option>
                   <option value={15}>15</option>
                 </Select>
-                <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+                <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                   {errors.groupsize?.message}
                 </Text>
               </Box>
@@ -270,7 +283,7 @@ const RegistrationForm = () => {
             >
               I agreed with the event terms and conditions and privacy policy
             </Checkbox>
-            <Text color='red' fontSize={[null, "13px", "14px"]}>
+            <Text color='red' fontSize={["13px", "13px", "14px"]}>
               {errors.agreement?.message}
             </Text>
           </VStack>
@@ -281,14 +294,14 @@ const RegistrationForm = () => {
               loadingText='Submitting'
               type='submit'
               h={["46px", "46px", "53px"]}
-              w={["152px", "152px", "172px"]}
+              w={["100%"]}
               bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'
               borderRadius='4px'
             >
               Register
             </Button>
             {isSubmissionError && (
-              <Text mt={1} color='red' fontSize={[null, "13px", "14px"]}>
+              <Text mt={1} color='red' fontSize={["13px", "13px", "14px"]}>
                 {error?.response?.data?.email}
               </Text>
             )}

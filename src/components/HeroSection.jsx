@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
   const navigate = useNavigate();
 
+  //handle navigation to registration page
   const onClickRegister = () => {
     navigate("register");
   };
@@ -32,10 +33,10 @@ const HeroSection = () => {
       textAlign={["center", "center", "left"]}
     >
       <Flex
-        align={["end"]}
+        align={["center", "center", "center", "end", "end", "end"]}
         flexDir={"column"}
         justifyContent={["end"]}
-        pr={["5%"]}
+        pr={["0", "0", "0", "5%"]}
         mb={["-40px", "-80px", "-120px"]}
       >
         <Heading

@@ -13,6 +13,8 @@ import contactUtil from "../util/contact-util";
 
 const ContactForm = () => {
   const { register, formState, handleSubmit, reset } = useForm();
+
+  //handle post request with react-query
   const {
     mutate: sendMessage,
     isLoading: isSending,
@@ -20,6 +22,8 @@ const ContactForm = () => {
     error,
     status,
   } = useMutation(contactUtil);
+
+  //get errors from the form - i.e if the user doesn't fill required fields
   const { errors } = formState;
 
   //send user message
@@ -32,6 +36,7 @@ const ContactForm = () => {
     sendMessage(contactinfo);
   };
 
+  //handles windows reload - This clears user forms and set status back to idle
   const onBack = () => {
     reset();
     location.reload();
@@ -42,7 +47,7 @@ const ContactForm = () => {
         <Box textAlign={["center"]}>
           <Heading
             as='h2'
-            fontSize={[null, "20px", "32px"]}
+            fontSize={["20px", "20px", "32px"]}
             fontFamily='ClashDisplay-Bold'
             mb='16px'
             color={"#D434FE"}
@@ -77,9 +82,16 @@ const ContactForm = () => {
             </Heading>
             <Text
               fontFamily='Montserrat-Regular'
-              fontSize={[null, "12px", "16px"]}
+              fontSize={["12px", "12px", "16px"]}
               mb={2}
-              display={[null, "initial", "none"]}
+              display={[
+                "initial",
+                "initial",
+                "initial",
+                "none",
+                "none",
+                "none",
+              ]}
             >
               Email us below to any question related to our event
             </Text>
@@ -143,12 +155,10 @@ const ContactForm = () => {
                 type='submit'
                 isLoading={isSending}
                 loadingText='Sending message...'
-                h={[null, "46px", "53px"]}
-                w={[null, "152px", "172px"]}
-                sx={{
-                  bg: "linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9);",
-                  borderRadius: "4px",
-                }}
+                h={["46px", "46px", "53px"]}
+                w={["152px", "152px", "172px"]}
+                bg='linear-gradient(to left, #903aff, #bb2eed, #d826db, #ee28c9, #fe34b9)'
+                borderRadius='4px'
               >
                 Submit
               </Button>
